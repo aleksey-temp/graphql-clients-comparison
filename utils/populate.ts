@@ -9,6 +9,8 @@ import { createTables } from '../database/scripts/create'
 import { insertIntoUsers, insertIntoPosts } from '../database/sql/insert'
 
 const insertRandomUsers = async (client: Client) => {
+  const ops: Promise<void>[] = []
+
   for (let i = 0; i < MAX_USERS; i++) {
     const user: UserBlank = {
       firstName: faker.name.firstName(),
@@ -16,19 +18,25 @@ const insertRandomUsers = async (client: Client) => {
       email: faker.internet.email()
     }
 
-    await insertIntoUsers(user, client)
+    ops.push(insertIntoUsers(user, client))
   }
+
+  return Promise.all(ops)
 }
 
 const insertRandomPosts = async (client: Client) => {
+  const ops: Promise<void>[] = []
+
   for (let i = 0; i < MAX_POSTS; i++) {
     const post: PostBlank = {
       content: faker.lorem.paragraph(),
       userId: faker.random.number({ min: 1, max: MAX_USERS })
     }
 
-    await insertIntoPosts(post, client)
+    ops.push(insertIntoPosts(post, client))
   }
+
+  return Promise.all(ops)
 }
 
 const populate = async () => {
