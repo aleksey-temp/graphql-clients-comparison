@@ -3,7 +3,6 @@ import { Client } from 'pg'
 import gqlMiddleware from 'express-graphql'
 
 import { schema } from './gql.schema'
-import { rootResolver } from './root.resolver'
 
 type Options = {
   dbClient: Client
@@ -17,7 +16,6 @@ export const configureServer = ({ dbClient }: Options) => {
     gqlMiddleware({
       schema,
       graphiql: true,
-      rootValue: rootResolver,
       context: {
         db: dbClient
       }
