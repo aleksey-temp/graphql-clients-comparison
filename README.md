@@ -1,31 +1,28 @@
 # GraphQL Node.js clients comparison
 
-Build the database image
+This repo contains multiple GraphQL servers examples.
 
-```
-docker image build -f db.Dockerfile -t graphql_db .
-```
+Data inside these servers is taken from a PostgreSQL database.
+In order to setup PostgreSQL in docker do the following:
 
-Run container with the database
+1. Build the database image
+`docker image build -f db.Dockerfile -t graphql_db .`
 
-```
-docker container run -d -p 5432:5432 graphql_db
-```
+2. Run container with the database
+`docker container run -d -p 5432:5432 graphql_db`
 
-Install dependencies
+3. Install dependencies
+`npm install`
 
-```
-npm install
-```
+4. Generate fake data
+`npm run db:populate`
 
-To generate fake data
+5. (Optional) drop databases to remove data
+`npm run db:drop`
 
-```
-npm run db:populate
-```
+## Express-Graphql
 
-To drop all tables
+Uses `grapgql.js` and `express-graphql` middleware
 
-```
-npm run db:drop
-```
+1. Run server `npm run express-graphql`
+2. Go to `localhost:3001/graphql`

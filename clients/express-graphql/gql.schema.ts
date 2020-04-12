@@ -8,7 +8,7 @@ import {
 } from 'graphql'
 
 import { getUsers, getUserById } from '../../common/users'
-import { getPostsByUserId } from '../../common/posts'
+import { getPostsByUserId, getPosts, getPostById } from '../../common/posts'
 import { DBUser } from '../../types/User'
 import { DBPost } from '../../types/Post'
 
@@ -67,6 +67,17 @@ const query = new GraphQLObjectType({
         userId: { type: GraphQLInt }
       },
       resolve: async (_, { userId }, { db }) => await getUserById(db, userId)
+    },
+    posts: {
+      type: new GraphQLList(PostType),
+      resolve: async (_, __, { db }) => await getPosts(db)
+    },
+    post: {
+      type: PostType,
+      args: {
+        postId: { type: GraphQLInt }
+      },
+      resolve: async (_, { postId }, { db }) => await getPostById(db, postId)
     }
   }
 })
