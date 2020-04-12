@@ -6,7 +6,8 @@
   "scripts": {
     "db:populate": "ts-node utils/populate.ts",
     "db:drop": "ts-node utils/drop.ts",
-    "express-graphql": "ts-node ./clients/express-graphql"
+    "express-graphql": "ts-node ./clients/express-graphql",
+    "express-graphql:benchmark": "ts-node ./clients/express-graphql/benchmark"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/alekseyio/graphql-clients-comparison#readme",
   "dependencies": {
+    "autocannon": "^4.6.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "faker": "^4.1.0",
@@ -31,6 +33,7 @@
     "ts-node": "^8.8.1"
   },
   "devDependencies": {
+    "@types/autocannon": "^4.1.0",
     "@types/express": "^4.17.6",
     "@types/faker": "^4.1.10",
     "@types/graphql": "^14.5.0",
