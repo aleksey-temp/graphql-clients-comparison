@@ -3,7 +3,7 @@ import autocannon, { Options } from 'autocannon'
 export const runBenchmark = async (url: string) => {
   const options: Options = {
     url,
-    connections: 5,
+    connections: 10,
     pipelining: 1,
     method: 'POST',
     headers: {
