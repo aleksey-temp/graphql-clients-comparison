@@ -8,7 +8,8 @@
     "db:drop": "ts-node utils/drop.ts",
     "express-graphql": "ts-node ./clients/express-graphql",
     "express-graphql:benchmark": "ts-node ./clients/express-graphql/benchmark",
-    "restify-graphql": "ts-node ./clients/restify-graphql"
+    "restify-graphql": "ts-node ./clients/restify-graphql",
+    "restify-graphql:benchmark": "ts-node ./clients/restify-graphql/benchmark"
   },
   "repository": {
     "type": "git",
