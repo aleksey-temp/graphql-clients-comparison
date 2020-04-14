@@ -82,3 +82,12 @@ Uses `apollo-server` and `fastify` as a server
 2. Go to `localhost:3007/graphql`
 
 Run benchmark: `npm run apollo-server-fastify:benchmark`
+
+## GraphQL-Yoga
+
+Based on `apollo-server` and `express`
+
+1. Run server `npm run graphql-yoga`
+2. Go to `localhost:3008`
+
+Run benchmark: `npm run graphql-yoga:benchmark`
