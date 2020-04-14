@@ -22,7 +22,7 @@ const configureServer = async () => {
 export const main = async () => {
   const app = await configureServer()
 
-  app.listen(3002, (err, address) => {
+  app.listen(3003, (err, address) => {
     if (err) {
       console.log('Fastify-GQL server error...')
 

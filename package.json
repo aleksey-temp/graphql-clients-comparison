@@ -10,7 +10,8 @@
     "express-graphql:benchmark": "ts-node ./clients/express-graphql/benchmark",
     "restify-graphql": "ts-node ./clients/restify-graphql",
     "restify-graphql:benchmark": "ts-node ./clients/restify-graphql/benchmark",
-    "fastify-gql": "ts-node ./clients/fastify-gql"
+    "fastify-gql": "ts-node ./clients/fastify-gql",
+    "fastify-gql:benchmark": "ts-node ./clients/fastify-gql/benchmark"
   },
   "repository": {
     "type": "git",
