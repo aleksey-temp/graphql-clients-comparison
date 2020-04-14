@@ -20,10 +20,29 @@ In order to setup PostgreSQL in docker do the following:
 5. (Optional) drop databases to remove data
    `npm run db:drop`
 
-## Express-Graphql
+## Express-GraphQL
 
 Uses `grapgql.js` and `express-graphql` middleware
 
 1. Run server `npm run express-graphql`
 2. Go to `localhost:3001/graphql`
-3. Run benchmark `npm run express-graphql:benchmark`
+
+Run benchmark: `npm run express-graphql:benchmark`
+
+## Restify-GraphQL
+
+Uses `graphql.js` and `express-graphql` middleware
+
+1. Run server `npm run restify-graphql`
+2. Go to `localhost:3002/graphql`
+
+Run benchmark: `npm run restify-graphql:benchmark`
+
+## Fastify-GQL
+
+Uses `fastify` as a web-framework and `fastify-gql`
+
+1. Run server `npm run fastify-gql`
+2. Go to `localhost:3003/graphql`
+
+Run benchmark: `npm run restify-gql:benchmark`
