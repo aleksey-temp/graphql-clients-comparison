@@ -64,3 +64,12 @@ Uses `apollo-server` and `express` as a server
 2. Go to `localhost:3005/graphql`
 
 Run benchmark: `npm run apollo-server-express:benchmark`
+
+## Apollo-Server-Koa
+
+Uses `apollo-server` and `koa` as a server
+
+1. Run server `npm run apollo-server-koa`
+2. Go to `localhost:3006/graphql`
+
+Run benchmark: `npm run apollo-server-koa:benchmark`
