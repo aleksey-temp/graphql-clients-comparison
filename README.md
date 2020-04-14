@@ -73,3 +73,12 @@ Uses `apollo-server` and `koa` as a server
 2. Go to `localhost:3006/graphql`
 
 Run benchmark: `npm run apollo-server-koa:benchmark`
+
+## Apollo-Server-Fastify
+
+Uses `apollo-server` and `fastify` as a server
+
+1. Run server `npm run apollo-server-fastify`
+2. Go to `localhost:3007/graphql`
+
+Run benchmark: `npm run apollo-server-fastify:benchmark`

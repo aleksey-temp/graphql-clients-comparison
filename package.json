@@ -17,7 +17,9 @@
     "apollo-server-express": "ts-node ./clients/apollo-server-express",
     "apollo-server-express:benchmark": "ts-node ./clients/apollo-server-express/benchmark",
     "apollo-server-koa": "ts-node ./clients/apollo-server-koa",
-    "apollo-server-koa:benchmark": "ts-node ./clients/apollo-server-koa/benchmark"
+    "apollo-server-koa:benchmark": "ts-node ./clients/apollo-server-koa/benchmark",
+    "apollo-server-fastify": "ts-node ./clients/apollo-server-fastify",
+    "apollo-server-fastify:benchmark": "ts-node ./clients/apollo-server-fastify/benchmark"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,7 @@
   "dependencies": {
     "apollo-server": "^2.12.0",
     "apollo-server-express": "^2.12.0",
+    "apollo-server-fastify": "^2.12.0",
     "apollo-server-koa": "^2.12.0",
     "autocannon": "^4.6.0",
     "express": "^4.17.1",
