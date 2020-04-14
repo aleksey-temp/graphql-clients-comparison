@@ -12,7 +12,8 @@
     "restify-graphql:benchmark": "ts-node ./clients/restify-graphql/benchmark",
     "fastify-gql": "ts-node ./clients/fastify-gql",
     "fastify-gql:benchmark": "ts-node ./clients/fastify-gql/benchmark",
-    "apollo-server": "ts-node ./clients/apollo-server"
+    "apollo-server": "ts-node ./clients/apollo-server",
+    "apollo-server:benchmark": "ts-node ./clients/apollo-server/benchmark"
   },
   "repository": {
     "type": "git",

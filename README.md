@@ -46,3 +46,12 @@ Uses `fastify` as a web-framework and `fastify-gql`
 2. Go to `localhost:3003/graphql`
 
 Run benchmark: `npm run restify-gql:benchmark`
+
+## Apollo-Server
+
+Uses `apollo-server` and `graphql`
+
+1. Run server `npm run apollo-server`
+2. Go to `localhost:3004/graphql`
+
+Run benchmark: `npm run apollo-server:benchmark`
