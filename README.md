@@ -2,8 +2,8 @@
 
 This repo contains multiple GraphQL servers examples.
 
-Data inside these servers is taken from a PostgreSQL database.
-In order to setup PostgreSQL in docker do the following:
+These servers use data from the same PostgreSQL database running in docker container.
+In order to run all benchmarks do the following:
 
 1. Build the database image
    `docker image build -f db.Dockerfile -t graphql_db .`
@@ -22,6 +22,8 @@ In order to setup PostgreSQL in docker do the following:
 
 6. Run benchmark container:
    `docker container run -it --network "host" graphql_benchmark`
+
+7. All of the data will be present in the stdout of your console
 
 ## Express-GraphQL
 
