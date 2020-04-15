@@ -17,8 +17,11 @@ In order to setup PostgreSQL in docker do the following:
 4. Generate fake data
    `npm run db:populate`
 
-5. (Optional) drop databases to remove data
-   `npm run db:drop`
+5. Build benchmark image which contains all clients:
+   `docker image build -f benchmark.Dockerfile -t graphql_benchmark .`
+
+6. Run benchmark container:
+   `docker container run -it --network "host" graphql_benchmark`
 
 ## Express-GraphQL
 

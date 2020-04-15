@@ -21,7 +21,8 @@
     "apollo-server-fastify": "ts-node ./clients/apollo-server-fastify",
     "apollo-server-fastify:benchmark": "ts-node ./clients/apollo-server-fastify/benchmark",
     "graphql-yoga": "ts-node ./clients/graphql-yoga",
-    "graphql-yoga:benchmark": "ts-node ./clients/graphql-yoga/benchmark"
+    "graphql-yoga:benchmark": "ts-node ./clients/graphql-yoga/benchmark",
+    "benchmark": "run-s express-graphql:benchmark restify-graphql:benchmark fastify-gql:benchmark apollo-server:benchmark apollo-server-express:benchmark apollo-server-koa:benchmark apollo-server-fastify:benchmark graphql-yoga:benchmark"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0",
     "graphql-yoga": "^1.18.3",
     "koa": "^2.11.0",
+    "npm-run-all": "^4.1.5",
     "pg": "^7.18.2",
     "restify": "^8.5.1",
     "ts-node": "^8.8.1"
